@@ -13,7 +13,7 @@ class CategoryViewSet(ModelViewSet):
     serializer_class = CategorySerializer
 
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().order_by('id')
     serializer_class = ProductSerializer
     # permission_classes = [AllowAny,]
     # permission_classes = [IsAdminUser] # используется, если неи функции для запрета
